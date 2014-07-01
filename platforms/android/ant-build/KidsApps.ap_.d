@@ -37,6 +37,7 @@
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/index.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/js \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/phonegap.js \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/plugins \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/bower_components/angular \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/bower_components/angular-animate \
