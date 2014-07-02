@@ -7,27 +7,39 @@ var KidsApp = angular.module('KidsApp', ['ui.router']);
 KidsApp.config(
   function($stateProvider, $urlRouterProvider) {
       
-    $urlRouterProvider.otherwise('partials/bedroom');
+    $urlRouterProvider.otherwise('partials/start');
       
     $stateProvider
-    .state('bedroom', {
+    .state('start', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/bedroom.html"}
+            "app": { templateUrl: "partials/start.html"}
           }
       })
-    .state('bathroom', {
+    .state('spring', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/bathroom.html"}
+            "app": { templateUrl: "partials/spring.html"}
           }
       })
-    .state('kitchen', {
+    .state('summer', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/kitchen.html"}
+            "app": { templateUrl: "partials/summer.html"}
           }
-      })    
+      }) 
+    .state('fall', {
+          url: "",
+          views: {
+            "app": { templateUrl: "partials/fall.html"}
+          }
+      }) 
+    .state('winter', {
+          url: "",
+          views: {
+            "app": { templateUrl: "partials/winter.html"}
+          }
+      }) 
   });
 
 KidsApp.directive('myDraggable', ['$document', function($document) {
