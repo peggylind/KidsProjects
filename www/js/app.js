@@ -2,136 +2,67 @@
 
 /* App Module */
 
-var KidsApp = angular.module('KidsApp', [
-    'ui.router','angular-gestures','KidsControllers'//,'KidsControllers','angular-gestures'
-  //'ngTouch', 'ngGesture','ngResource','databaseServicesModule','HealthyHomesControllers'
-]); //dependencies
+var KidsApp = angular.module('KidsApp', ['ui.router']);
 
 KidsApp.config(
-  function($stateProvider) {
-    $stateProvider.
-    state('logo', {
+  function($stateProvider, $urlRouterProvider) {
+      
+    $urlRouterProvider.otherwise('partials/bedroom');
+      
+    $stateProvider
+    .state('bedroom', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/logoPage.html", controller:'MainCtrl'}
+            "app": { templateUrl: "partials/bedroom.html"}
           }
-      }).
-      state('exampleGesture', {
-          url:'example',
+      })
+    .state('bathroom', {
+          url: "",
           views: {
-              "app": {templateUrl: "partials/exampleGesture.html", controller:'MainCtrl'}
+            "app": { templateUrl: "partials/bathroom.html"}
           }
-      }).
-      state('layout', {
-          url: "/login/layout",
+      })
+    .state('kitchen', {
+          url: "",
           views: {
-            "app": {templateUrl: "partials/layout.html"}
+            "app": { templateUrl: "partials/kitchen.html"}
           }
-      }).
-      state('questions', {
-          url: "/login/questions",
-          views: {
-            "app": {templateUrl: "partials/questions.html"}
-          }
-      }).
-      state('camera', {
-          url: "/login/camera",
-          views: {
-            "app": {templateUrl: "partials/camera.html"}
-          }
-      });
+      })    
   });
+
+KidsApp.directive('myDraggable', ['$document', function($document) {
+    return function(scope, element, attr) {
+      var startX = 0, startY = 0, x = 0, y = 0;
+
+      element.css({
+       position: 'absolute',       
+       cursor: 'pointer'
+      });
+
+      element.on('mousedown', function(event) {
+        // Prevent default dragging of selected content
+        event.preventDefault();
+        startX = event.pageX - x;
+        startY = event.pageY - y;
+        $document.on('mousemove', mousemove);
+        $document.on('mouseup', mouseup);
+      });
+
+      function mousemove(event) {
+        y = event.pageY - startY;
+        x = event.pageX - startX;
+        element.css({
+          top: y + 'px',
+          left:  x + 'px'
+        });
+      }
+
+      function mouseup() {
+        $document.off('mousemove', mousemove);
+        $document.off('mouseup', mouseup);
+      }
+    };
+  }]);
+
+
     
-//        .state('home', {
-//            url: "/home",
-//            templateUrl: "/partials/home.html"
-////          views: {
-////            "app":      { templateUrl: "/partials/home.html"},
-////            "sideselectbar": { templateUrl: "partials/sideselectbar.html"}
-////            //"menuBar":  { templateUrl: "partials/menuBar.html", controller: 'menuCtrl'}
-////          }
-//        })
-//        .state('login', {
-//            
-//        })
-//        .state('user', {
-//            
-//        })
-//        .state('layout', {
-//            //should there be nested views for the different floors?
-//        })
-//        .state('questions', {
-//            
-//        })
-//        .state('manager', {
-//            
-//        });
-//    });
-        
-        /*state('login', {
-          url: "/phones/:phoneId",
-          views: {
-            "app": {templateUrl: "partials/beatles.html", controller: 'PhoneListCtrl'} 
-          }
-        })*/
-      // Anonymous routes http://www.frederiknakstad.com/2014/02/09/ui-router-in-angular-client-side-auth/
-    //at some point might help with the residential versions - now there is no anonymous use
-   /*     .state('anon', {
-            abstract: true,
-            template: "<ui-view/>",
-            data: {
-                access: access.anon
-            }
-        })
-        .state('anon.login', {
-            url: '/login/',
-            templateUrl: 'login',
-            controller: 'LoginCtrl'
-        })
-        .state('anon.register', {
-            url: '/register/',
-            templateUrl: 'register',
-            controller: 'RegisterCtrl'
-        });*/
-
-// Regular user routes
-/*$stateProvider
-    .state('user', {
-        abstract: true,
-        template: "<ui-view/>",
-        data: {
-            access: access.user
-        }
-    })
-    .state('user.home', {
-        url: '/',
-        templateUrl: 'home'
-    })
-    .state('user.private', {
-        abstract: true,
-        url: '/private/',
-        templateUrl: 'private/layout'
-    })
-    .state('user.private.home', {
-        url: '',
-        templateUrl: 'private/home'
-    })
-    .state('user.private.nested', {
-        url: 'nested/',
-        templateUrl: 'private/nested'
-    })
-    .state('user.private.admin', {
-        url: 'admin/',
-        templateUrl: 'private/nestedAdmin',
-        data: {
-            access: access.admin
-        }
-    });
-
-      state('loginHomePage', {
-          views: {
-            "app": {url: "", templateUrl: "partials/loginPage.html"}
-          }
-      });*/
-  
-
