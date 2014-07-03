@@ -1,9 +1,46 @@
 .button {
-    display: inline-block;
+    
     position: absolute; top:300px; left:333px;
     margin: 10px;
     padding: 0 20px;
-    text-align: centser;
+    text-align: center;
     text-decoration: none;
     font: bold 50px/25px Cursive, sans-serif;
 }
+
+
+.my-special-animation {
+    position:absolute;
+    left:220px;
+    top:150px;
+    opacity:0;   
+}
+
+/* starting animations */
+.my-special-animation.ng-enter {
+  -webkit-animation:3s watering linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: ;
+}
+
+
+
+@-webkit-keyframes watering {
+  from { 
+      opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  to {  
+      
+    opacity:1;
+    -webkit-transform:  rotate(-90deg) scaleX(1) scaleY(1) ;
+  }
+}
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var KidsApp = angular.module('KidsApp', ['ui.router']);
+var KidsApp = angular.module('KidsApp', ['ui.router', 'ngAnimate']);
 
 KidsApp.config(
   function($stateProvider, $urlRouterProvider) {

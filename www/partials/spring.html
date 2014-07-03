@@ -1,11 +1,22 @@
-<div>
+<div ng-init="on=false">
+    
+    
         <a style="position:absolute; top: 10px;"
            ui-sref="summer">Go to Summer</a>
         
-    <img src="../img/Spring.png" 
-         style="width:100%";/>
+        <img src="../img/Spring.png" 
+            style="width:100%";/>
     
-    <img src="../img/springtree.png" 
-         style="position:absolute; top:222px; left:114px; width: 35%; height: 35%"/>
-                                                                                                      
+        <img src="../img/springtree.png" 
+            style="position:absolute; top:222px; left:114px; width: 35%; height: 35%"/>
+
+        <img ng-click="on=!on"             
+             src="../img/button.png" 
+             style="width: 10%;position:absolute; top: 30px; left:190px"/>
+
+        <div class="my-special-animation" ng-if="on">
+            <img src="../img/watercan.png" />
+        </div>                                                                                                
+    </div>
+    
 </div>
