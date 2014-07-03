@@ -10,24 +10,18 @@ KidsApp.config(
     $urlRouterProvider.otherwise('partials/bedroom');
       
     $stateProvider
-    .state('bedroom', {
+    .state('diving', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/bedroom.html"}
+            "app": { templateUrl: "partials/diving.html", controller:'MainCtrl'}
           }
       })
-    .state('bathroom', {
+    .state('example', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/bathroom.html"}
+            "app": { templateUrl: "partials/exampleGesture.html", controller:'MainCtrl'}
           }
       })
-    .state('kitchen', {
-          url: "",
-          views: {
-            "app": { templateUrl: "partials/kitchen.html"}
-          }
-      })    
   });
 
 KidsApp.directive('myDraggable', ['$document', function($document) {
