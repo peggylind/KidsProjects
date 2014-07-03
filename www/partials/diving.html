@@ -3,7 +3,7 @@
 <title></title>
 <head>
     <style>
-        body{background: url(../img/diving/diving-background.png) no-repeat center center fixed; background-position: left top;}
+        body{background: url(/img/diving-background.png) no-repeat center center fixed; background-position: left top;}
         #board{border: 1px solid; width:100px;height:12px;
                 background-color: white;position:absolute;left:775px;top:245px;}
         #board2{border: 1px solid; width:100px;height:12px;
@@ -24,10 +24,9 @@
 <body>
 
 <!-- <img style="width:100%" src="http://cdn.trans-americas.com/blog/wp-content/uploads/2011/01/Acapulco-cliff-diver_swan.jpg"/>-->
-<a href="testAbigail2.html">
-<div id="board"></div></a>
-<div id="board2" hm-tap="alert('clicked')"></div> 
-<!--<div id="board3"></div>
-<div id="board4"></div>-->
+
+<div id="board" move-diver></div>
+<div id="board2" move-diver hm-tap="alert('clicked')"></div> 
+<a ui-sref="example"><div id="board3"></div></a>
     </body>
 </html>

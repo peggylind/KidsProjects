@@ -11,33 +11,44 @@ KidsControllers.controller('MainCtrl', ['$scope',
 //        console.log($event.gesture);
 //        $scope.gesture = $event.gesture;
 //    };
-    $scope.type = '--';
-      
+    $scope.type = '--';      
     $scope.handleGesture = function($event) {
-        function touchHandlerDummy(e)
+//http://stackoverflow.com/questions/10246305/android-browser-touch-events-stop-display-being-updated-inc-canvas-elements-h/10495741#10495741
+        function touchHandlerDummy(e) 
             {
                 e.preventDefault();
                 return false;
             }
-            document.addEventListener("touchstart", touchHandlerDummy, false);
-            document.addEventListener("touchmove", touchHandlerDummy, false);
-            document.addEventListener("touchend", touchHandlerDummy, false);
-      console.log($event.type)
-      $scope.type = $event.type;
-      $scope.gesture = $event.gesture;
+        document.addEventListener("touchstart", touchHandlerDummy, false);
+        document.addEventListener("touchmove", touchHandlerDummy, false);
+        document.addEventListener("touchend", touchHandlerDummy, false);
+        console.log($event.type)
+        $scope.type = $event.type;
+        $scope.gesture = $event.gesture;
         $scope.topPostion = $event.gesture.center.pageY;
     };
-      $scope.topPosition = 100;
-      $scope.setTopPosition= {
-            top : $scope.topPosition+'px',
-            background : "green",
-            "width": 0 + 'px',
-            "height": 5 + 'px'
-        };
-      $scope.alert = function(text){
-          alert(text);
-      }
-  }]);
+    $scope.alert = function(text){
+        alert(text);
+    };
+  }])
+.directive('moveDiver', function() {
+  return {
+    restrict: 'AE',
+    replace: true,
+    template: '<p style="background-color:{{color}}">Hello World',
+    link: function(scope, elem, attrs) {
+      elem.bind('click', function() {
+        elem.css('background-color', 'white');
+        scope.$apply(function() {
+          scope.color = "white";
+        });
+      });
+      elem.bind('mouseover', function() {
+        elem.css('cursor', 'pointer');
+      });
+    }
+  };
+});
 //.controller('loginCtrl', ['$scope', 'databaseConnection',
 //  function($scope, $rootScope, databaseConnection) {
 //    $scope.submit = function() {
