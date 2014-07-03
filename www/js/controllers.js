@@ -25,22 +25,25 @@ KidsControllers.controller('MainCtrl', ['$scope',
         console.log($event.type)
         $scope.type = $event.type;
         $scope.gesture = $event.gesture;
-        $scope.topPostion = $event.gesture.center.pageY;
+        $scope.topPosition = $event.gesture.center.pageY;
     };
     $scope.alert = function(text){
         alert(text);
     };
   }])
-.directive('moveDiver', function() {
+.directive('moveIt', function() {
   return {
     restrict: 'AE',
     replace: true,
-    template: '<p style="background-color:{{color}}">Hello World',
+    template: '<p top:{{tpos+"px"}};left:{{lpos+"px"}}">',
     link: function(scope, elem, attrs) {
       elem.bind('click', function() {
-        elem.css('background-color', 'white');
+        var tpos = elem[0].offsetTop + 25;
+        var lpos = elem[0].offsetLeft - 25;
+        //elem.css({'top': tpos+'px', 'left': lpos+'px'});
         scope.$apply(function() {
-          scope.color = "white";
+            //alert(tpos)
+          elem.css({'top': tpos+'px', 'left': lpos+'px'});
         });
       });
       elem.bind('mouseover', function() {
@@ -48,6 +51,28 @@ KidsControllers.controller('MainCtrl', ['$scope',
       });
     }
   };
+})
+.directive('dragMove',function() {
+    return {
+        restrict: 'AE',
+        replace: true,
+        scope: {
+            tpos: "&",
+            lpos: "&"
+        },
+        template: '<p hm-drag style="top:{{tpos+"px"}};left:{{lpos+"px"}}" >This is for dragging</p>',
+        link: function(scope,elem,attrs) {
+//            var tpos = elem[0].offsetTop || 245;
+//            var lpos = elem[0].offsetLeft || 775;
+            //positions = [tpos+'px',lpos+'px'];
+            //elem.bind('drag', function() { //works, but continues to drag after
+            elem.bind('dragend', function() {
+                alert(elem[0].gesture.center.pageX);   //Object.keys(attrs) = $$element,$attr,dragMove,id,style,hmDrag,$$observers
+                
+
+            });
+        }
+    }
 });
 //.controller('loginCtrl', ['$scope', 'databaseConnection',
 //  function($scope, $rootScope, databaseConnection) {
