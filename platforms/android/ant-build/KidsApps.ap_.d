@@ -363,6 +363,7 @@
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/bg.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/calander.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/camera.png \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/diving \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/door.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/doorsmall.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/eraser.png \
@@ -402,6 +403,9 @@
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/window.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/yellowflag.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/yellowsquare.png \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/diving/diving-background.png \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/diving/star1.jpg \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/img/diving/STAR1.png \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/js/app.js \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/js/controllers.js \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/js/services.js \
@@ -412,6 +416,7 @@
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/clickMe2.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/clickMe3.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/contact.html \
+/Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/diving.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/exampleGesture.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/home.html \
 /Users/dprice3/Documents/Projects/KidsProjects/platforms/android/assets/www/partials/img \

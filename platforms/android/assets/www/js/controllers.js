@@ -6,11 +6,11 @@ var KidsControllers = angular.module('KidsControllers',['ui.router','angular-ges
 
 KidsControllers.controller('MainCtrl', ['$scope',
   function($scope) {
-      $scope.cx = 50;
-    $scope.myDrag = function($event) {
-        console.log($event.gesture);
-        $scope.gesture = $event.gesture;
-    };
+//      $scope.cx = 50;
+//    $scope.myDrag = function($event) {
+//        console.log($event.gesture);
+//        $scope.gesture = $event.gesture;
+//    };
     $scope.type = '--';
     $scope.handleGesture = function($event) {
       console.log($event.type)
@@ -22,9 +22,12 @@ KidsControllers.controller('MainCtrl', ['$scope',
       $scope.setTopPosition= {
             top : $scope.topPosition+'px',
             background : "green",
-            "width": 0 + '%',
+            "width": 0 + 'px',
             "height": 5 + 'px'
         };
+      $scope.alert = function(text){
+          alert(text);
+      }
   }]);
 //.controller('loginCtrl', ['$scope', 'databaseConnection',
 //  function($scope, $rootScope, databaseConnection) {

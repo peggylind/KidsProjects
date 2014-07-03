@@ -28,6 +28,12 @@ KidsApp.config(
             "app": {templateUrl: "partials/layout.html"}
           }
       }).
+      state('diving', {
+          url: "/diving",
+          views: {
+            "app": {templateUrl: "partials/diving.html", controller:'MainCtrl'}
+          }
+      }).
       state('questions', {
           url: "/login/questions",
           views: {
