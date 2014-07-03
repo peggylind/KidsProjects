@@ -8,5 +8,6 @@ bower install
 grunt serve
 or
 cordova serve
+or phonegap serve for the phonegap developer app
 
 might have to do phonegap create, depending on how you did the folder - if so, back out one higher level and create the project with the existing folder's name again. This lets you run the phonegap developer's realtime version.
