@@ -4,7 +4,7 @@
 
 var KidsControllers = angular.module('KidsControllers',['ui.router','angular-gestures']);
 
-KidsControllers.controller('MainCtrl', ['$scope',
+KidsControllers.controller('MainCtrl', ['$scope', 
   function($scope) {
 //      $scope.cx = 50;
 //    $scope.myDrag = function($event) {
@@ -30,6 +30,10 @@ KidsControllers.controller('MainCtrl', ['$scope',
     $scope.alert = function(text){
         alert(text);
     };
+      $scope.countTime = function(){
+      //$scope.newDate = new Date();
+          alert(Date().getTime());
+      }
   }])
 .directive('moveIt', function() {
   return {
@@ -72,6 +76,15 @@ KidsControllers.controller('MainCtrl', ['$scope',
 
             });
         }
+    }
+})
+.directive('countTime',function($interval){
+    return function(scope, element, attrs) {
+    function updateTime() {
+          element.text(dateFilter(new Date(), format));
+        }
+        stopTime = $interval(updateTime, 1000);
+    alert(stopTime);
     }
 });
 //.controller('loginCtrl', ['$scope', 'databaseConnection',

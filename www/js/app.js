@@ -10,16 +10,16 @@ KidsApp.config(
     $urlRouterProvider.otherwise('partials/bedroom');
       
     $stateProvider
-    .state('diving', {
+    .state('select', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/diving.html", controller:'MainCtrl'}
+            "app": { templateUrl: "partials/pokechase_character_select.html", controller:'MainCtrl'}
           }
       })
-    .state('example', {
+    .state('pokechase', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/exampleGesture.html", controller:'MainCtrl'}
+            "app": { templateUrl: "partials/pokechase.html", controller:'MainCtrl'}
           }
       })
   });
