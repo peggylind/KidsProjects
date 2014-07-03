@@ -7,7 +7,7 @@ var KidsApp = angular.module('KidsApp', ['ui.router', 'ngAnimate']);
 KidsApp.config(
   function($stateProvider, $urlRouterProvider) {
       
-    $urlRouterProvider.otherwise('partials/start');
+    $urlRouterProvider.otherwise('start');
       
     $stateProvider
     .state('start', {

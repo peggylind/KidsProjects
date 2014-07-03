@@ -8,32 +8,104 @@
     font: bold 50px/25px Cursive, sans-serif;
 }
 
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
 
-.my-special-animation {
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+
+
+
+.gardener {    
+    position:absolute;
+    top:350px;
+    left:600px;
+}
+
+.element-animation{
+  -webkit-animation: animationFrames ease 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 0% 0%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+}
+
+/* starting animations */
+.gardener.ng-enter {
+  -webkit-animation: animationFrames ease-out 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: ;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    left:300px;
+    top:500px;
+    opacity:0;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(-30deg) ;
+  }
+  60% {
+    left:500px;
+    opacity:1;
+    -webkit-transform:  skewX(30deg) ;
+  }
+  80% {
+    left:400;
+    -webkit-transform:  skewX(-15deg) ;
+  }
+  100% {
+    left:600px;
+    top:350px;
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) ;
+  }
+}
+
+.watercan-animation {
     position:absolute;
     left:220px;
-    top:150px;
+    top:90px;
     opacity:0;   
 }
 
 /* starting animations */
-.my-special-animation.ng-enter {
+.watercan-animation.ng-enter {
   -webkit-animation:3s watering linear;
   -webkit-animation-iteration-count: 1;
   -webkit-transform-origin: ;
 }
 
-
-
 @-webkit-keyframes watering {
   from { 
       opacity:1;
-    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+    -webkit-transform:  rotate(0deg)  ;
   }
   to {  
       
     opacity:1;
-    -webkit-transform:  rotate(-90deg) scaleX(1) scaleY(1) ;
+    -webkit-transform:  rotate(-50deg)  ;
   }
 }
 
