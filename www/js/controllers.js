@@ -35,11 +35,11 @@ KidsControllers.controller('MainCtrl', ['$scope',
   return {
     restrict: 'AE',
     replace: true,
-    template: '<p top:{{tpos+"px"}};left:{{lpos+"px"}}">',
+    template: '<img src="../img/Diving1.png" top:{{tpos+"px"}};left:{{lpos+"px"}}">',
     link: function(scope, elem, attrs) {
       elem.bind('click', function() {
-        var tpos = elem[0].offsetTop + 25;
-        var lpos = elem[0].offsetLeft - 25;
+        var tpos = elem[0].offsetTop + 25 || 245;
+        var lpos = elem[0].offsetLeft - 25 || 750;
         //elem.css({'top': tpos+'px', 'left': lpos+'px'});
         scope.$apply(function() {
             //alert(tpos)

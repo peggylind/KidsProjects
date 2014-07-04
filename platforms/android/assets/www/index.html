@@ -1,24 +1,30 @@
 <!doctype html>
-<html lang="en" ng-app="KidsApp">
+<html lang="en" >
     
 <head>
     <meta charset="utf-8">
     <title>Kids Summer of Apps</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
+    
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+<!--    <script src="bower_components/jquery/dist/jquery.js"></script>-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-gestures/gestures.min.js"></script>    
+    <script src="bower_components/angular-gestures/gestures.min.js"></script>
     <script src="js/app.js"></script> 
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
-</head> 
-<body>
+    <script src="js/controllers.js"></script> 
+</head>
+<!-- apply our angular app to our site -->
+<body ng-app="KidsApp">
     <div ui-view="app" class="slide"></div>
+</div>
 </body>
     
 </html>
+
+
+
+
+    
+
 
