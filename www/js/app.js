@@ -13,7 +13,7 @@ KidsApp.config(
     .state('AniDino', {
           url: "",
           views: {
-            "app": { templateUrl: "partials/AniDino.html", controller:'MainCtrl'}
+            "app": { templateUrl: "partials/AniDinoFight.html", controller:'MainCtrl'}
           }
       })
     .state('AniDinoSpecial', {

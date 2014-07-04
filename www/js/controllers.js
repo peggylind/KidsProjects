@@ -11,6 +11,14 @@ KidsControllers.controller('MainCtrl', ['$scope',
 //        console.log($event.gesture);
 //        $scope.gesture = $event.gesture;
 //    };
+    
+        $scope.jumpon = false;
+        $scope.specialon = false;
+        $scope.punchon = false;
+        $scope.kickon = false;
+    
+    
+     
     $scope.type = '--';      
     $scope.handleGesture = function($event) {
 //http://stackoverflow.com/questions/10246305/android-browser-touch-events-stop-display-being-updated-inc-canvas-elements-h/10495741#10495741
