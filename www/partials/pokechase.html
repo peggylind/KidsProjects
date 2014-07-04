@@ -3,68 +3,87 @@
 <head>
     <style>
         body {background: url(../img/meadow-pond.jpg) no-repeat center center fixed; width:100%;background-position: left top; }
+        #gligar {
+            position:absolute;
+            left:480px;
+            top:100px;
+            -webkit-animation: gligar 2s, repeat;};
+            @-webkit-keyframes gligar {
+            from {position:absolute;
+                    left:480px;
+                    top:100px;}
+            to {-webkit-transform: rotate(-30deg)}
+        };
+        
 /*        #backgrnd {url(meadow-pond.jpg) no-repeat center center fixed;width:1164px;height:774px;}*/
     </style>
     
 </head>
 
-<body>
+<body ng-init="on=false">
     
     <!--<img style="position:fixed;width:100%" src="meadow-pond.jpg">
     <a href="http://www.easttexasland.com/74-16-acres-outside-of-mckinney-w-hilltop-meadow-pond/">
        </a>-->
     <div id="backgrnd">
         <a ui-sref="select"><h3>Select</h3></a>
-    <a href="pokechase2.html">
-        <img style="position:fixed;left:610px;top:400px" src="../img/polijump1.png">
-    </a>
-    <a href="pokechase2.html">
+    
+    <img style="position:fixed;left:610px;top:400px" src="../img/polijump1.png" >
+    
+   
     <img style="position:fixed;left:610px;top:550px" src="../img/sandile1.png">
-    </a>
-    <a href="pokechase2.html">
-    <img style="position:fixed;left:1050;top:550" src="../img/pikachu.jpg">
-    </a>
-    <a href="pokechase2.html">
-    <img style="position:fixed;left:480px;top:100px" src="../img/gligar1.png">
-    </a>
-        <a href="http://bulbapedia.bulbagarden.net/wiki/Heracross_(Pok%C3%A9mon)">
-        <img style="position:fixed;left:999px;top:550" src="../img/heracross.png">
-        </a>
-    <a href="http://zusuriki.deviantart.com/art/Nr-16-Pidgey-211719671">
+    
+    <img ng-click="on=!on" style="position:relative;left:1050;top:550" src="../img/pikachu.jpg">
+    
+        <div class="pikachu" ng-if="on">
+           <img   style="position:relative;left:1050;top:650" src="../img/pikachu.jpg">
+            
+        </div>
+        
+    
+   
+    <div id="gligar"><img src="../img/gligar1.png"/></div>
+    
+        
+    <img style="position:fixed;left:999px;top:550" src="../img/heracross.png">
+        
+   
     <img style="position:fixed;left:567px;top:100px" src="../img/pidgey.png">
-    </a>
-    <a href="http://pokemondb.net/pokedex/yanma">
+    
+
     <img style="position:fixed;left:589px;top:420px" src="../img/yanma.jpg">
-    </a>
-        <a href="http://pokemondb.net/pokedex/yanma">
+    
+       
     <img style="position:fixed;left:589px;top:450px" src="../img/yanma.jpg">
-    </a>
-            <a href="http://pokemondb.net/pokedex/yanma">
+   
+            
     <img style="position:fixed;left:589px;top:430px" src="../img/yanma.jpg">
-    </a>
-            <a href="http://pokemondb.net/pokedex/yanma">
+   
+            
     <img style="position:fixed;left:589px;top:400px" src="../img/yanma.jpg">
-    </a>
-            <a href="http://pokemondb.net/pokedex/yanma">
+    
+            
     <img style="position:fixed;width:2%;left:589px;top:379px" src="../img/yanma.jpg">
-    </a>
-    <a href="http://bulbapedia.bulbagarden.net/wiki/Durant_(Pok%C3%A9mon)">
+    
+   
     <img style="position:fixed;left:623px;top:554px" src="../img/durant.png">
-    </a>
-         <a href="http://bulbapedia.bulbagarden.net/wiki/Durant_(Pok%C3%A9mon)">
+    
+         
     <img style="position:fixed;left:589px;top:529px" src="../img/durant.png">
-    </a>
-         <a href="http://bulbapedia.bulbagarden.net/wiki/Durant_(Pok%C3%A9mon)">
+    
+         
     <img style="position:fixed;left:560px;top:529px" src="../img/durant.png">
-    </a>
-         <a href="http://bulbapedia.bulbagarden.net/wiki/Durant_(Pok%C3%A9mon)">
+    
+         
     <img style="position:fixed;width:2%;left:540px;top:529px" src="../img/durant.png">
-    </a>
-         <a href="http://bulbapedia.bulbagarden.net/wiki/Durant_(Pok%C3%A9mon)">
+    
+        
     <img style="position:fixed;left:510px;top:529px" src="../img/durant.png">
-    </a>
-    <a href="http://www.clipartof.com/gallery/clipart/ant_hill.html">
+    
+    
     <img style="position:fixed;position;left:460px;top:550px" src="../img/antpile.jpg">
-    </a>
+        
+    <img style="position:fixed;position;left:1000px;top:500px" src="../img/antpile.jpg">
+    
         </div>
     </body>

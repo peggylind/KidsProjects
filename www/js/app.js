@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var KidsApp = angular.module('KidsApp', ['ui.router','KidsControllers']);
+var KidsApp = angular.module('KidsApp', ['ui.router','KidsControllers', 'ngAnimate']);
 
 KidsApp.config(
   function($stateProvider, $urlRouterProvider) {
@@ -10,18 +10,19 @@ KidsApp.config(
     $urlRouterProvider.otherwise('partials/bedroom');
       
     $stateProvider
-    .state('select', {
-          url: "",
-          views: {
-            "app": { templateUrl: "partials/pokechase_character_select.html", controller:'MainCtrl'}
-          }
-      })
     .state('pokechase', {
           url: "",
           views: {
             "app": { templateUrl: "partials/pokechase.html", controller:'MainCtrl'}
           }
       })
+    .state('select', {
+          url: "",
+          views: {
+            "app": { templateUrl: "partials/pokechase_character_select.html", controller:'MainCtrl'}
+          }
+      })
+    
   });
 
 //KidsApp.directive('myDraggable', ['$document', function($document) {

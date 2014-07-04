@@ -1,18 +1,47 @@
-.box { color: white; text-align: center; height: 100px; font-size: 86px; }
-.on  { background-color: green; }
-.off { background-color: red; }
-
-
-.box-show-setup, .box-hide-setup {
-  -webkit-transition:all linear 0.3s;
-  -moz-transition:all linear 0.3s;
-  -ms-transition:all linear 0.3s;
-  -o-transition:all linear 0.3s;
-  transition:all linear 0.3s;
+.pikachu.ng-enter {
+  -webkit-animation: animationFrames linear 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: ;
 }
 
-.box-show-setup { opacity:0; height: 0; }
-.box-show-setup.box-show-start { opacity:1; height: 100px; }
-
-.box-hide-setup { opacity:1; height: 0; }
-.box-hide-setup.box-hide-start { opacity:0; height: 100px; }
+@-webkit-keyframes animationFrames {
+  0% {
+    left:-10px;
+    top:-61px;
+    opacity:1;
+    -webkit-transform:  rotate(-178deg) scaleX(-1.1399999999999915) scaleY(-1.0099999999999987) ;
+  }
+  10% {
+    -webkit-transform:  rotate(-3deg) scaleX(0.8) scaleY(0.8) ;
+  }
+  20% {
+    -webkit-transform:  rotate(-3deg) scaleX(0.8) scaleY(0.8) ;
+  }
+  30% {
+    -webkit-transform:  rotate(3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  40% {
+    -webkit-transform:  rotate(-3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  50% {
+    -webkit-transform:  rotate(3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  60% {
+    -webkit-transform:  rotate(-3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  70% {
+    -webkit-transform:  rotate(3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  80% {
+    -webkit-transform:  rotate(-3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  90% {
+    -webkit-transform:  rotate(3deg) scaleX(1.2) scaleY(1.2) ;
+  }
+  100% {
+    left:-10px;
+    top:-61px;
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1.2) scaleY(1.2) ;
+  }
+}
